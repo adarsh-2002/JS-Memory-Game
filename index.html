@@ -10,12 +10,33 @@
   <body>
     <script src="scripts.js" defer></script>
     <header id="header">
+      <h2 id="start-msg">Press start to begin!</h2>
       <h1>Memory Game</h1>
-      <h2>Score: <span id="score">0</span></h2>
-      <h2>Flips: <span id="flips">0</span></h2>
-      <div id="timer"></div>
+      <table>
+        <tr>
+          <th>Cards Matched</th>
+          <td><span id="score">0</span></td>
+        </tr>
+        <tr>
+          <th>Flips</th>
+          <td><span id="flips">0</span></td>
+        </tr>
+        <tr>
+          <th>Accuracy</th>
+          <td><span id="points">0</span>%</td>
+        </tr>
+      </table>
+      <div id="controls">
+        <h2>Timer: <span id="timer">300</span>s left</h2>
+        <button id="start" onclick="gameStart()">Start</button>
+        <button id="reset" onclick="location.reload()">Reset</button>
+      </div>
     </header>
     <main id="main">
+      <h2>
+        Round <span id="round">1</span> :
+        <span id="level-timer">300</span> seconds timer
+      </h2>
       <section class="mem-game">
         <div class="mem-card" data-image="bolt">
           <img class="front-side" src="img/eye-regular.svg" alt="eye-regular" />

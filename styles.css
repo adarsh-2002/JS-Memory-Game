@@ -5,12 +5,30 @@
 }
 
 body {
+  padding: 20px;
+  border: 20px solid chocolate;
+  border-radius: 10px;
   height: 100vh;
   background-color: bisque;
+  display: flex;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+  text-align: center;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
 }
 
 .main {
   display: flex;
+}
+
+span {
+  font-style: inherit;
+  font-weight: bold;
 }
 
 .mem-card {
@@ -33,13 +51,16 @@ body {
 }
 
 .mem-game {
-  border: 2px solid chocolate;
+  border: 20px solid chocolate;
+  border-radius: 10px;
   margin: auto;
   width: 640px;
   height: 640px;
   display: flex;
   flex-wrap: wrap;
   perspective: 1000px;
+  padding: 5px;
+  align-items: center;
 }
 
 .front-side,
@@ -55,4 +76,23 @@ body {
 
 .back-side {
   transform: rotateY(180deg);
+}
+
+table,
+th,
+td {
+  border: 2px solid chocolate;
+  border-radius: 10px;
+  border-collapse: collapse;
+  margin: 10px auto;
+  padding: 10px;
+  min-width: 100px;
+}
+
+button {
+  min-width: 100px;
+  min-height: 50px;
+  border-radius: 10px;
+  color: bisque;
+  background-color: chocolate;
 }
