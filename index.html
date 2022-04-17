@@ -1,119 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Memory Game</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <script src="scripts.js" defer></script>
     <header id="header">
-        <h1>Memory Game</h1>
-        <h2>Score: <span id="score">0</span></h2>
-        <div id="timer"></div>
+      <h1>Memory Game</h1>
+      <h2>Score: <span id="score">0</span></h2>
+      <h2>Flips: <span id="flips">0</span></h2>
+      <div id="timer"></div>
     </header>
     <main id="main">
-        <section class="mem-game">
-            <div class="mem-card">
-                <img class="front-side" src="img/eye-regular.svg" alt="eye-regular">
-                <img class="back-side" src="img/bolt-solid.svg" alt="bolt-solid">
-            </div>
-            <div class="mem-card">
-                <img class="front-side" src="img/eye-regular.svg" alt="eye-regular">
-                <img class="back-side" src="img/bolt-solid.svg" alt="bolt-solid">
-            </div>
-            <div class="mem-card">
-                <img class="front-side" src="img/eye-regular.svg" alt="eye-regular">
-                <img class="back-side" src="img/circle-solid.svg" alt="circle-solid">
-            </div>
-            <div class="mem-card">
-                <img class="front-side" src="img/eye-regular.svg" alt="eye-regular">
-                <img class="back-side" src="img/circle-solid.svg" alt="circle-solid">
-            </div>
-            <div class="mem-card">
-                <img class="front-side" src="img/eye-regular.svg" alt="eye-regular">
-                <img class="back-side" src="img/clover-solid.svg" alt="clover-solid">
-            </div>
-            <div class="mem-card">
-                <img class="front-side" src="img/eye-regular.svg" alt="eye-regular">
-                <img class="back-side" src="img/clover-solid.svg" alt="clover-solid">
-            </div>
-            <div class="mem-card">
-                <img class="front-side" src="img/eye-regular.svg" alt="eye-regular">
-                <img class="back-side" src="img/compass-solid.svg" alt="compass-solid">
-            </div>
-            <div class="mem-card">
-                <img class="front-side" src="img/eye-regular.svg" alt="eye-regular">
-                <img class="back-side" src="img/compass-solid.svg" alt="compass-solid">
-            </div>
-            <div class="mem-card">
-                <img class="front-side" src="img/eye-regular.svg" alt="eye-regular">
-                <img class="back-side" src="img/crown-solid.svg" alt="crown-solid">
-            </div>
-            <div class="mem-card">
-                <img class="front-side" src="img/eye-regular.svg" alt="eye-regular">
-                <img class="back-side" src="img/crown-solid.svg" alt="crown-solid">
-            </div>
-            <div class="mem-card">
-                <img class="front-side" src="img/eye-regular.svg" alt="eye-regular">
-                <img class="back-side" src="img/diamond-solid.svg" alt="diamond-solid">
-            </div>
-            <div class="mem-card">
-                <img class="front-side" src="img/eye-regular.svg" alt="eye-regular">
-                <img class="back-side" src="img/diamond-solid.svg" alt="diamond-solid">
-            </div>
-            <div class="mem-card">
-                <img class="front-side" src="img/eye-regular.svg" alt="eye-regular">
-                <img class="back-side" src="img/heart-solid.svg" alt="heart-solid">
-            </div>
-            <div class="mem-card">
-                <img class="front-side" src="img/eye-regular.svg" alt="eye-regular">
-                <img class="back-side" src="img/heart-solid.svg" alt="heart-solid">
-            </div>
-            <div class="mem-card">
-                <img class="front-side" src="img/eye-regular.svg" alt="eye-regular">
-                <img class="back-side" src="img/play-solid.svg" alt="play-solid">
-            </div>
-            <div class="mem-card">
-                <img class="front-side" src="img/eye-regular.svg" alt="eye-regular">
-                <img class="back-side" src="img/play-solid.svg" alt="play-solid">
-            </div>
-            <div class="mem-card">
-                <img class="front-side" src="img/eye-regular.svg" alt="eye-regular">
-                <img class="back-side" src="img/square-solid.svg" alt="square-solid">
-            </div>
-            <div class="mem-card">
-                <img class="front-side" src="img/eye-regular.svg" alt="eye-regular">
-                <img class="back-side" src="img/square-solid.svg" alt="square-solid">
-            </div>
-            <div class="mem-card">
-                <img class="front-side" src="img/eye-regular.svg" alt="eye-regular">
-                <img class="back-side" src="img/star-solid.svg" alt="star-solid">
-            </div>
-            <div class="mem-card">
-                <img class="front-side" src="img/eye-regular.svg" alt="eye-regular">
-                <img class="back-side" src="img/star-solid.svg" alt="star-solid">
-            </div>
-            <div class="mem-card">
-                <img class="front-side" src="img/eye-regular.svg" alt="eye-regular">
-                <img class="back-side" src="img/droplet-solid.svg" alt="droplet-solid">
-            </div>
-            <div class="mem-card">
-                <img class="front-side" src="img/eye-regular.svg" alt="eye-regular">
-                <img class="back-side" src="img/droplet-solid.svg" alt="droplet-solid">
-            </div>
-            <div class="mem-card">
-                <img class="front-side" src="img/eye-regular.svg" alt="eye-regular">
-                <img class="back-side" src="img/flag-solid.svg" alt="flag-solid">
-            </div>
-            <div class="mem-card">
-                <img class="front-side" src="img/eye-regular.svg" alt="eye-regular">
-                <img class="back-side" src="img/flag-solid.svg" alt="flag-solid">
-            </div>
-        </section>
+      <section class="mem-game">
+        <div class="mem-card" data-image="bolt">
+          <img class="front-side" src="img/eye-regular.svg" alt="eye-regular" />
+          <img class="back-side" src="img/bolt-solid.svg" alt="bolt-solid" />
+        </div>
+        <div class="mem-card" data-image="bolt">
+          <img class="front-side" src="img/eye-regular.svg" alt="eye-regular" />
+          <img class="back-side" src="img/bolt-solid.svg" alt="bolt-solid" />
+        </div>
+        <div class="mem-card" data-image="circle">
+          <img class="front-side" src="img/eye-regular.svg" alt="eye-regular" />
+          <img
+            class="back-side"
+            src="img/circle-solid.svg"
+            alt="circle-solid"
+          />
+        </div>
+        <div class="mem-card" data-image="circle">
+          <img class="front-side" src="img/eye-regular.svg" alt="eye-regular" />
+          <img
+            class="back-side"
+            src="img/circle-solid.svg"
+            alt="circle-solid"
+          />
+        </div>
+        <div class="mem-card" data-image="clover">
+          <img class="front-side" src="img/eye-regular.svg" alt="eye-regular" />
+          <img
+            class="back-side"
+            src="img/clover-solid.svg"
+            alt="clover-solid"
+          />
+        </div>
+        <div class="mem-card" data-image="clover">
+          <img class="front-side" src="img/eye-regular.svg" alt="eye-regular" />
+          <img
+            class="back-side"
+            src="img/clover-solid.svg"
+            alt="clover-solid"
+          />
+        </div>
+        <div class="mem-card" data-image="compass">
+          <img class="front-side" src="img/eye-regular.svg" alt="eye-regular" />
+          <img
+            class="back-side"
+            src="img/compass-solid.svg"
+            alt="compass-solid"
+          />
+        </div>
+        <div class="mem-card" data-image="compass">
+          <img class="front-side" src="img/eye-regular.svg" alt="eye-regular" />
+          <img
+            class="back-side"
+            src="img/compass-solid.svg"
+            alt="compass-solid"
+          />
+        </div>
+        <div class="mem-card" data-image="crown">
+          <img class="front-side" src="img/eye-regular.svg" alt="eye-regular" />
+          <img class="back-side" src="img/crown-solid.svg" alt="crown-solid" />
+        </div>
+        <div class="mem-card" data-image="crown">
+          <img class="front-side" src="img/eye-regular.svg" alt="eye-regular" />
+          <img class="back-side" src="img/crown-solid.svg" alt="crown-solid" />
+        </div>
+        <div class="mem-card" data-image="diamond">
+          <img class="front-side" src="img/eye-regular.svg" alt="eye-regular" />
+          <img
+            class="back-side"
+            src="img/diamond-solid.svg"
+            alt="diamond-solid"
+          />
+        </div>
+        <div class="mem-card" data-image="diamond">
+          <img class="front-side" src="img/eye-regular.svg" alt="eye-regular" />
+          <img
+            class="back-side"
+            src="img/diamond-solid.svg"
+            alt="diamond-solid"
+          />
+        </div>
+        <div class="mem-card" data-image="heart">
+          <img class="front-side" src="img/eye-regular.svg" alt="eye-regular" />
+          <img class="back-side" src="img/heart-solid.svg" alt="heart-solid" />
+        </div>
+        <div class="mem-card" data-image="heart">
+          <img class="front-side" src="img/eye-regular.svg" alt="eye-regular" />
+          <img class="back-side" src="img/heart-solid.svg" alt="heart-solid" />
+        </div>
+        <div class="mem-card" data-image="play">
+          <img class="front-side" src="img/eye-regular.svg" alt="eye-regular" />
+          <img class="back-side" src="img/play-solid.svg" alt="play-solid" />
+        </div>
+        <div class="mem-card" data-image="play">
+          <img class="front-side" src="img/eye-regular.svg" alt="eye-regular" />
+          <img class="back-side" src="img/play-solid.svg" alt="play-solid" />
+        </div>
+        <div class="mem-card" data-image="square">
+          <img class="front-side" src="img/eye-regular.svg" alt="eye-regular" />
+          <img
+            class="back-side"
+            src="img/square-solid.svg"
+            alt="square-solid"
+          />
+        </div>
+        <div class="mem-card" data-image="square">
+          <img class="front-side" src="img/eye-regular.svg" alt="eye-regular" />
+          <img
+            class="back-side"
+            src="img/square-solid.svg"
+            alt="square-solid"
+          />
+        </div>
+        <div class="mem-card" data-image="star">
+          <img class="front-side" src="img/eye-regular.svg" alt="eye-regular" />
+          <img class="back-side" src="img/star-solid.svg" alt="star-solid" />
+        </div>
+        <div class="mem-card" data-image="star">
+          <img class="front-side" src="img/eye-regular.svg" alt="eye-regular" />
+          <img class="back-side" src="img/star-solid.svg" alt="star-solid" />
+        </div>
+        <div class="mem-card" data-image="droplet">
+          <img class="front-side" src="img/eye-regular.svg" alt="eye-regular" />
+          <img
+            class="back-side"
+            src="img/droplet-solid.svg"
+            alt="droplet-solid"
+          />
+        </div>
+        <div class="mem-card" data-image="droplet">
+          <img class="front-side" src="img/eye-regular.svg" alt="eye-regular" />
+          <img
+            class="back-side"
+            src="img/droplet-solid.svg"
+            alt="droplet-solid"
+          />
+        </div>
+        <div class="mem-card" data-image="flag">
+          <img class="front-side" src="img/eye-regular.svg" alt="eye-regular" />
+          <img class="back-side" src="img/flag-solid.svg" alt="flag-solid" />
+        </div>
+        <div class="mem-card" data-image="flag">
+          <img class="front-side" src="img/eye-regular.svg" alt="eye-regular" />
+          <img class="back-side" src="img/flag-solid.svg" alt="flag-solid" />
+        </div>
+      </section>
     </main>
-    
-</body>
+  </body>
 </html>
