@@ -36,12 +36,12 @@ function gameStart(round = 1) {
   updateBoard();
 }
 
-// (function shuffle() {
-//     cards.forEach(card => {
-//         let randomPos = Math.floor(Math.random()*12);
-//         card.style.order = randomPos;
-//     });
-// })();
+(function shuffle() {
+    cards.forEach(card => {
+        let randomPos = Math.floor(Math.random()*12);
+        card.style.order = randomPos;
+    });
+})();
 
 function flipCard() {
   if (lockBoard) return;
